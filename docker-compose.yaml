@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-wallet
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_HOST: localhost
+      POSTGRES_USER: wallet_user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: wallet_db
+
+volumes:
+  postgres_data:

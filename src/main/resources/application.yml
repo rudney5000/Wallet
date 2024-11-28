@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: walletAPI
+  datasource:
+    url: jdbc:postgresql://postgres:5432/wallet_db
+    username: wallet_user
+    password: password
+    liquibase:
+      change-log: classpath:/db/changelog/db.changelog-master.yaml
+    jpa:
+      hibernate:
+        ddl-auto: none
